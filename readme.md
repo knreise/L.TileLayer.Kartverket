@@ -8,7 +8,15 @@ essentially a wrapper over L.TileLayer.
 Usage
 -----
 
+Either install using bower:
+
+    bower install L.TileLayer.Kartverket -S
+
+or, download manually. Include the file in yout page, and use it:
+
     L.tileLayer.kartverket('layer_name', options).addTo(map);
+
+or, more verbose:
 
     var layer = new L.TileLayer.Kartverket('layer_name', options);
 
