@@ -27,6 +27,12 @@ To get a list of layer names, call:
 
     var layer_names = L.tileLayer.kartverket.getLayers();
 
+Demo
+-----
+See [the demo page][demo].
+
+[demo]: http://knreise.github.io/L.TileLayer.Kartverket/example.html
+
 License
 -------
 This plugin is licensed under the Apache Software License, Version 1.1, 
