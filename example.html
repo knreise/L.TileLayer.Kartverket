@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <style type="text/css">
+            #map {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+         <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+          <script src="dist/L.TileLayer.Kartverket.min.js"></script>
+          <script type="text/javascript">
+            (function() {
+                'use strict';
+
+                var map = L.map('map').setView([65.5, 17.0], 4);
+
+                var i, layer;
+                var layers = L.tileLayer.kartverket.getLayers();
+
+                var baseLayers = {};
+                for (i = 0; i < layers.length; i++) {
+                    layer = layers[i];
+                    baseLayers[layer] = L.tileLayer.kartverket(layer);
+                }
+                baseLayers[layers[0]].addTo(map);
+                L.control.layers(baseLayers).addTo(map);
+            }());
+          </script>
+    </body>
+</html>
