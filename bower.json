@@ -1,7 +1,7 @@
 {
   "name": "L.TileLayer.Kartverket",
   "main": "L.TileLayer.Kartverket.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     "Atle Frenvik Sveen <atle.sveen@norkart.no>"
   ],
