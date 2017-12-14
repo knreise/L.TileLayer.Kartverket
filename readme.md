@@ -8,7 +8,11 @@ essentially a wrapper over L.TileLayer.
 Usage
 -----
 
-Either install using bower:
+Either install using npm:
+
+    npm install tilelayer-kartverket -S
+
+or Bower:
 
     bower install L.TileLayer.Kartverket -S
 
