@@ -7,12 +7,17 @@
 
         baseUrl: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps',
 
+        mappings: {
+            topo2: 'topo4',
+            topo2graatone: 'topo4graatone'
+        },
+
         layers: [
             'matrikkel_bakgrunn',
             'topo4',
             'topo4graatone',
             'europa',
-            'toporaster2',
+            'toporaster',
             'sjo_hovedkart2',
             'kartdata2',
             'norges_grunnkart',
@@ -35,7 +40,11 @@
 
         initialize: function (layer, options) {
             if (this.layers.indexOf(layer) === -1) {
-                throw new Error('Unknown layer "' + layer + '"');
+                if (this.mappings[layer]) {
+                    layer = this.mappings[layer];
+                } else {
+                    throw new Error('Unknown layer "' + layer + '"');
+                }
             }
             options = options || {};
             var url = this.baseUrl + '?layers=' + layer + '&zoom={z}&x={x}&y={y}';

@@ -1,10 +1,12 @@
 {
   "name": "tilelayer-kartverket",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Leaflet plugin for easy adding of tiles from Kartverket",
   "main": "L.TileLayer.Kartverket.js",
   "scripts": {
-    "test": ""
+    "test": "",
+    "prepublish": "npm run uglify",
+    "uglify": "uglifyjs -o dist/L.TileLayer.Kartverket.min.js L.TileLayer.Kartverket.js"
   },
   "keywords": [
     "Leaflet",
@@ -13,9 +15,7 @@
   "author": "Atle Frenvik Sveen",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-bump-build-git": "^1.1.1",
-    "grunt-contrib-uglify": "^0.9.1"
+    "uglify-js": "^3.3.20"
   },
   "repository": {
     "type": "git",
