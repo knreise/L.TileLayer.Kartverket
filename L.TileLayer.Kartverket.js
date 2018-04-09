@@ -9,8 +9,8 @@
 
         layers: [
             'matrikkel_bakgrunn',
-            'topo2',
-            'topo2graatone',
+            'topo4',
+            'topo4graatone',
             'europa',
             'toporaster2',
             'sjo_hovedkart2',
@@ -22,8 +22,8 @@
 
         layerNames: [
             'Matrikkel bakgrunn',
-            'Topografisk norgeskart 2',
-            'Topografisk norgeskart 2 gråtone',
+            'Topografisk norgeskart 4',
+            'Topografisk norgeskart 4 gråtone',
             'Europakart',
             'Topografisk norgeskart, raster 2',
             'Sjøkart hovedkartserien 2',
