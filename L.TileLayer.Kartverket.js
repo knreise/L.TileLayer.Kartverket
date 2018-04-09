@@ -5,7 +5,7 @@
 
     L.TileLayer.Kartverket = L.TileLayer.extend({
 
-        baseUrl: 'http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps',
+        baseUrl: 'https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps',
 
         mappings: {
             topo2: 'topo4',
@@ -50,7 +50,10 @@
             var url = this.baseUrl + '?layers=' + layer + '&zoom={z}&x={x}&y={y}';
 
             options =  L.extend(
-                {attribution: '&copy; <a href="http://kartverket.no">Kartverket</a>̈́'},
+                {
+                    attribution: '&copy; <a href="http://kartverket.no">Kartverket</a>',
+                    subdomains: ['opencache', 'opencache2', 'opencache3']
+                },
                 options
             );
             L.TileLayer.prototype.initialize.call(this, url, options);
