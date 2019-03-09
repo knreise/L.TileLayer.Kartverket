@@ -31,11 +31,11 @@
 
         layerNames: [
             'Matrikkel bakgrunn',
-            'Topografisk norgeskart 4',
-            'Topografisk norgeskart 4 gråtone',
+            'Topografisk norgeskart',
+            'Topografisk norgeskart gråtone',
             'Europakart',
-            'Topografisk norgeskart, raster 2',
-            'Sjøkart hovedkartserien 2',
+            'Topografisk norgeskart, raster',
+            'Sjøkart hovedkartserien',
             'Norges Grunnkart',
             'Norges grunnkart gråtone',
             'Europeisk grunnkart',
