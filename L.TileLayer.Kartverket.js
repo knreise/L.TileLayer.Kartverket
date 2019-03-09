@@ -9,6 +9,7 @@
                + 'layers={layer}&zoom={z}&x={x}&y={y}',
 
         options: {
+            maxNativeZoom: 18,
             attribution: '&copy; <a href="http://kartverket.no">Kartverket</a>',
             subdomains: ['', '2', '3']
         },
