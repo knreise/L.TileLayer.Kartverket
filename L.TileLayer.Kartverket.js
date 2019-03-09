@@ -5,11 +5,12 @@
 
     L.TileLayer.Kartverket = L.TileLayer.extend({
 
-        baseUrl: 'https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps',
+        baseUrl: 'https://opencache{s}.statkart.no/gatekeeper/gk/gk.open_gmaps?'
+               + 'layers={layer}&zoom={z}&x={x}&y={y}',
 
         options: {
             attribution: '&copy; <a href="http://kartverket.no">Kartverket</a>',
-            subdomains: ['opencache', 'opencache2', 'opencache3']
+            subdomains: ['', '2', '3']
         },
 
         mappings: {
@@ -55,9 +56,9 @@
                     throw new Error('Unknown layer "' + layer + '"');
                 }
             }
-            var url = this.baseUrl + '?layers=' + layer + '&zoom={z}&x={x}&y={y}';
 
-            L.TileLayer.prototype.initialize.call(this, url, options);
+            L.TileLayer.prototype.initialize.call(this, this.baseUrl, options);
+            this.options.layer = layer;
         }
 
     });
