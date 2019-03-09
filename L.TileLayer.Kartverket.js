@@ -25,7 +25,8 @@
             'sjokartraster',
             'norges_grunnkart',
             'norges_grunnkart_graatone',
-            'egk'
+            'egk',
+            'terreng_norgeskart'
         ],
 
         layerNames: [
@@ -37,7 +38,8 @@
             'Sjøkart hovedkartserien 2',
             'Norges Grunnkart',
             'Norges grunnkart gråtone',
-            'Europeisk grunnkart'
+            'Europeisk grunnkart',
+            'Terreng'
         ],
 
         initialize: function (layer, options) {
