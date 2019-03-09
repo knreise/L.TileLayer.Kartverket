@@ -8,6 +8,8 @@
         baseUrl: 'https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps',
 
         mappings: {
+            kartdata2: 'topo4',
+            norgeskart_bakgrunn: 'topo4',
             sjo_hovedkart2: 'sjokartraster',
             toporaster: 'toporaster3',
             topo2: 'topo4',
@@ -21,7 +23,6 @@
             'europa',
             'toporaster3',
             'sjokartraster',
-            'kartdata2',
             'norges_grunnkart',
             'norges_grunnkart_graatone',
             'egk'
@@ -34,7 +35,6 @@
             'Europakart',
             'Topografisk norgeskart, raster 2',
             'Sjøkart hovedkartserien 2',
-            null,
             'Norges Grunnkart',
             'Norges grunnkart gråtone',
             'Europeisk grunnkart'
