@@ -7,6 +7,11 @@
 
         baseUrl: 'https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps',
 
+        options: {
+            attribution: '&copy; <a href="http://kartverket.no">Kartverket</a>',
+            subdomains: ['opencache', 'opencache2', 'opencache3']
+        },
+
         mappings: {
             kartdata2: 'topo4',
             norgeskart_bakgrunn: 'topo4',
@@ -50,16 +55,8 @@
                     throw new Error('Unknown layer "' + layer + '"');
                 }
             }
-            options = options || {};
             var url = this.baseUrl + '?layers=' + layer + '&zoom={z}&x={x}&y={y}';
 
-            options =  L.extend(
-                {
-                    attribution: '&copy; <a href="http://kartverket.no">Kartverket</a>',
-                    subdomains: ['opencache', 'opencache2', 'opencache3']
-                },
-                options
-            );
             L.TileLayer.prototype.initialize.call(this, url, options);
         }
 
