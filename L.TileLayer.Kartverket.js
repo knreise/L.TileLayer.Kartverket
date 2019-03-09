@@ -8,6 +8,8 @@
         baseUrl: 'https://{s}.statkart.no/gatekeeper/gk/gk.open_gmaps',
 
         mappings: {
+            sjo_hovedkart2: 'sjokartraster',
+            toporaster: 'toporaster3',
             topo2: 'topo4',
             topo2graatone: 'topo4graatone'
         },
@@ -17,8 +19,8 @@
             'topo4',
             'topo4graatone',
             'europa',
-            'toporaster',
-            'sjo_hovedkart2',
+            'toporaster3',
+            'sjokartraster',
             'kartdata2',
             'norges_grunnkart',
             'norges_grunnkart_graatone',
