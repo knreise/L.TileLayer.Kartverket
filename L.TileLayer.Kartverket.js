@@ -33,7 +33,9 @@
             'norges_grunnkart',
             'norges_grunnkart_graatone',
             'egk',
-            'terreng_norgeskart'
+            'terreng_norgeskart',
+            'havbunn_grunnkart',
+            'bakgrunnskart_forenklet'
         ],
 
         layerNames: [
@@ -46,7 +48,9 @@
             'Norges Grunnkart',
             'Norges grunnkart gråtone',
             'Europeisk grunnkart',
-            'Terreng'
+            'Terreng',
+            'Havbunn grunnkart',
+            null
         ],
 
         initialize: function (layer, options) {
