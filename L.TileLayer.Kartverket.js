@@ -23,38 +23,23 @@
             topo2graatone: 'topo4graatone'
         },
 
-        layers: [
-            'matrikkel_bakgrunn',
-            'topo4',
-            'topo4graatone',
-            'europa',
-            'toporaster3',
-            'sjokartraster',
-            'norges_grunnkart',
-            'norges_grunnkart_graatone',
-            'egk',
-            'terreng_norgeskart',
-            'havbunn_grunnkart',
-            'bakgrunnskart_forenklet'
-        ],
-
-        layerNames: [
-            'Matrikkel bakgrunn',
-            'Topografisk norgeskart',
-            'Topografisk norgeskart gråtone',
-            'Europakart',
-            'Topografisk norgeskart, raster',
-            'Sjøkart hovedkartserien',
-            'Norges Grunnkart',
-            'Norges grunnkart gråtone',
-            'Europeisk grunnkart',
-            'Terreng',
-            'Havbunn grunnkart',
-            null
-        ],
+        layers: {
+            matrikkel_bakgrunn: 'Matrikkel bakgrunn',
+            topo4:              'Topografisk norgeskart',
+            topo4graatone:      'Topografisk norgeskart gråtone',
+            europa:             'Europakart',
+            toporaster3:        'Topografisk norgeskart, raster',
+            sjokartraster:      'Sjøkart hovedkartserien',
+            norges_grunnkart:   'Norges Grunnkart',
+            norges_grunnkart_graatone: 'Norges grunnkart gråtone',
+            egk:                'Europeiske grunnkart',
+            terreng_norgeskart: 'Terreng',
+            havbunn_grunnkart:  'Havbunn grunnkart',
+            bakgrunnskart_forenklet: null
+        },
 
         initialize: function (layer, options) {
-            if (this.layers.indexOf(layer) === -1) {
+            if (typeof this.layers[layer] === 'undefined') {
                 if (this.mappings[layer]) {
                     layer = this.mappings[layer];
                 } else {
@@ -64,6 +49,7 @@
 
             L.TileLayer.prototype.initialize.call(this, this.baseUrl, options);
             this.options.layer = layer;
+            this._name = this.layers[layer] || layer;
         }
 
     });
@@ -73,16 +59,7 @@
     };
 
     L.tileLayer.kartverket.getLayers = function () {
-        return L.TileLayer.Kartverket.prototype.layers.slice();
-    };
-
-    L.tileLayer.kartverket.getLayerName = function (layer) {
-        var idx = L.TileLayer.Kartverket.prototype.layers.indexOf(layer);
-        var name = null;
-        if (idx !== -1) {
-            name = L.TileLayer.Kartverket.prototype.layerNames[idx];
-        }
-        return (name !== null) ? name : layer;
+        return L.extend({},L.TileLayer.Kartverket.prototype.layers);
     };
 
 }());
