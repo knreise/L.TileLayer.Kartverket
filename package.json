@@ -1,6 +1,6 @@
 {
   "name": "tilelayer-kartverket",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Leaflet plugin for easy adding of tiles from Kartverket",
   "main": "L.TileLayer.Kartverket.js",
   "scripts": {
