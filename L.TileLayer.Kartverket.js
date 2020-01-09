@@ -24,7 +24,7 @@
         },
 
         layers: [
-            'matrikkel_bakgrunn',
+            'matrikkel_bakgrunn2',
             'topo4',
             'topo4graatone',
             'europa',
